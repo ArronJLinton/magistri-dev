@@ -1,43 +1,47 @@
-import React from "react";
-import HeaderOne from "@/layouts/headers/HeaderOne";
-import HeroHomeOne from "@/components/hero/HeroHomeOne";
-import FeatureHomeOne from "@/components/feature/FeatureHomeOne";
-import AboutHomeOne from "@/components/about/AboutHomeOne";
-import ProjectHomeOne from "@/components/project/ProjectHomeOne";
-import FunfactHomeOne from "@/components/funfact/FunfactHomeOne";
-import VideoHomeOne from "@/components/video/VideoHomeOne";
-import TestimonialHomeOne from "@/components/testimonial/TestimonialHomeOne";
-import ServiceHomeOne from "@/components/service/ServiceHomeOne";
-import TeamHomeOne from "@/components/team/TeamHomeOne";
-import BusinessHomeOne from "@/components/business/BusinessHomeOne";
-import CtaHomeOne from "@/components/cta/CtaHomeOne";
-import BlogHomeOne from "@/components/blog/BlogHomeOne";
-import BrandHomeOne from "@/components/brand/BrandHomeOne";
-import FooterOne from "@/layouts/footers/FooterOne";
-import Wrapper from "@/layouts/Wrapper";
+import React from 'react';
+import Wrapper from '@/layouts/Wrapper';
+import FooterOne from '@/layouts/footers/FooterOne';
+import HeaderThree from '@/layouts/headers/HeaderThree';
+import CtaHomeThree from '@/components/cta/CtaHomeThree';
+import BrandHomeOne from '@/components/brand/BrandHomeOne';
+import BlogHomeThree from '@/components/blog/BlogHomeThree';
+import HeroHomeThree from '@/components/hero/HeroHomeThree';
+import AboutHomeThree from '@/components/about/AboutHomeThree';
+import PricingHomeThree from '@/components/pricing/PricingHomeThree';
+import ProjectHomeThree from '@/components/project/ProjectHomeThree';
+import ServiceHomeThree from '@/components/service/ServiceHomeThree';
+import FeatureHomeThree from '@/components/feature/FeatureHomeThree';
+import LocationHomeThree from '@/components/location/LocationHomeThree';
+import SolutionHomeThree from '@/components/solution/SolutionHomeThree';
+import TestimonialHomeTwo from '@/components/testimonial/TestimonialHomeTwo';
+import TechnologyHomeThree from '@/components/technology/TechnologyHomeThree';
 
 export const metadata = {
-  title: "Tecch - Technology & IT Solutions Next js Template",
+  title: 'Magistri Dev',
 };
 
 const index = () => {
   return (
     <Wrapper>
-      <HeaderOne />
+      <HeaderThree />
       <main>
-        <HeroHomeOne />
-        <FeatureHomeOne />
-        <AboutHomeOne />
-        <ProjectHomeOne />
-        <FunfactHomeOne />
-        <VideoHomeOne />
-        <TestimonialHomeOne />
-        <ServiceHomeOne />
-        <BusinessHomeOne />
-        <TeamHomeOne />
-        <CtaHomeOne />
-        <BlogHomeOne />
-        <BrandHomeOne />
+        <HeroHomeThree />
+        <AboutHomeThree />
+
+        <ServiceHomeThree />
+
+        <ProjectHomeThree />
+
+        {/* <SolutionHomeThree /> */}
+        {/* <BrandHomeOne style_2={true} /> */}
+        {/* <TestimonialHomeTwo style_2={true} /> */}
+        {/* <PricingHomeThree /> */}
+        {/* <TechnologyHomeThree /> */}
+        {/* <BlogHomeThree /> */}
+
+        {/* <CtaHomeThree /> */}
+        {/* <LocationHomeThree /> */}
+        <FeatureHomeThree />
       </main>
       <FooterOne />
     </Wrapper>
