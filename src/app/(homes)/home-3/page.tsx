@@ -1,5 +1,3 @@
- 
-
 import React from "react";
 import Wrapper from "@/layouts/Wrapper";
 import FooterOne from "@/layouts/footers/FooterOne";
@@ -18,29 +16,30 @@ import SolutionHomeThree from "@/components/solution/SolutionHomeThree";
 import TestimonialHomeTwo from "@/components/testimonial/TestimonialHomeTwo";
 import TechnologyHomeThree from "@/components/technology/TechnologyHomeThree";
 
- 
 const index = () => {
-	return (
-		<Wrapper>
-			<HeaderThree />
-			<main>
-				<HeroHomeThree />
-				<FeatureHomeThree />
-				<AboutHomeThree />
-				<ServiceHomeThree />
-				<ProjectHomeThree />
-				<SolutionHomeThree />
-				<BrandHomeOne style_2={true} />
-				<TestimonialHomeTwo style_2={true} />
-				<PricingHomeThree />
-				<TechnologyHomeThree />
-				<BlogHomeThree />
-				<CtaHomeThree />
-				<LocationHomeThree />
-			</main>
-			<FooterOne />
-		</Wrapper>
-	);
+  return (
+    <Wrapper>
+      <HeaderThree />
+      <main>
+        <HeroHomeThree />
+        {/* <FeatureHomeThree /> */}
+        {/* <AboutHomeThree /> */}
+
+        <ProjectHomeThree />
+        <ServiceHomeThree />
+
+        {/* <SolutionHomeThree /> */}
+        {/* <BrandHomeOne style_2={true} /> */}
+        {/* <TestimonialHomeTwo style_2={true} /> */}
+        {/* <PricingHomeThree /> */}
+        {/* <TechnologyHomeThree /> */}
+        {/* <BlogHomeThree /> */}
+        {/* <CtaHomeThree /> */}
+        {/* <LocationHomeThree /> */}
+      </main>
+      <FooterOne />
+    </Wrapper>
+  );
 };
 
 export default index;

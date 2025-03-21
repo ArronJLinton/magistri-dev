@@ -1,16 +1,11 @@
-
-
-import "../styles/index.scss";
-
+import '../styles/index.scss';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Tecch - Technology & IT Solutions Next js Template',
-  description: 'Tecch - Technology & IT Solutions Next js Template',
+  title: 'Magistri Dev',
+  description: 'We build software solutions for your business.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
- 
-
 
 export default function RootLayout({
   children,
@@ -19,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>  
+      <head>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Kumbh+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
