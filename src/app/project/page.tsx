@@ -11,7 +11,6 @@ export const metadata = {
 };
 
 const index = () => {
-  console.log('123g2u1yg3lw12gyo783y2ps0xbyt');
   return (
     <Wrapper>
       <HeaderFour />
