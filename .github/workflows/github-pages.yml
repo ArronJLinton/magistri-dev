@@ -79,8 +79,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Debug Build Output
         run: ls -R .next
-      - name: Export Static Site
-        run: npx next export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
