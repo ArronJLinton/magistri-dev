@@ -4,7 +4,10 @@ import React from 'react';
 const ServiceHomeThree = () => {
   return (
     <>
-      <div className="it-service-4__area fix black-bg p-relative pt-120 pb-120 z-index">
+      <div
+        id="services"
+        className="it-service-4__area fix black-bg p-relative pt-120 pb-120 z-index"
+      >
         <div className="it-service-4__shape-3">
           <img src="assets/img/feature/shape-5.png" alt="rk-theme" />
         </div>
@@ -28,7 +31,7 @@ const ServiceHomeThree = () => {
               </div> */}
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-12 justify-center items-center gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-10 justify-center items-center gap-8">
             {/* <div
               className="col mb-30 wow itfadeUp"
               data-wow-duration=".9s"
@@ -52,7 +55,7 @@ const ServiceHomeThree = () => {
             </div> */}
 
             <div
-              className="col-span-2 md:col-span-3 mb-30 wow itfadeUp"
+              className="col-span-2 mb-30 wow itfadeUp"
               data-wow-duration=".9s"
               data-wow-delay=".5s"
             >
@@ -73,7 +76,7 @@ const ServiceHomeThree = () => {
               </div>
             </div>
             <div
-              className="col-span-2 md:col-span-3 mb-30 wow itfadeUp"
+              className="col-span-2 mb-30 wow itfadeUp"
               data-wow-duration=".9s"
               data-wow-delay=".7s"
             >
@@ -83,8 +86,8 @@ const ServiceHomeThree = () => {
                 </span>
                 <Link href="/service-details">
                   <h5 className="it-service-4__title">
-                    Marketing <br />
-                    Strategy
+                    Web <br />
+                    Development
                   </h5>
                 </Link>
                 <div className="it-service-4__link">
@@ -94,7 +97,7 @@ const ServiceHomeThree = () => {
               </div>
             </div>
             <div
-              className="col-span-2 md:col-span-3 mb-30 wow itfadeUp"
+              className="col-span-2 mb-30 wow itfadeUp"
               data-wow-duration=".9s"
               data-wow-delay=".9s"
             >
@@ -104,7 +107,7 @@ const ServiceHomeThree = () => {
                 </span>
                 <Link href="/service-details">
                   <h5 className="it-service-4__title">
-                    Web <br /> Development <br />
+                    Mobile <br /> Development <br />
                   </h5>
                 </Link>
                 <div className="it-service-4__link">
@@ -114,7 +117,7 @@ const ServiceHomeThree = () => {
               </div>
             </div>
             <div
-              className="col-span-2 md:col-span-3 mb-30 wow itfadeUp"
+              className="col-span-2 mb-30 wow itfadeUp"
               data-wow-duration=".9s"
               data-wow-delay="1s"
             >
@@ -124,8 +127,29 @@ const ServiceHomeThree = () => {
                 </span>
                 <Link href="/service-details">
                   <h5 className="it-service-4__title">
-                    Mobile <br />
+                    AI Agent <br />
                     Development
+                  </h5>
+                </Link>
+                <div className="it-service-4__link">
+                  <Link href="/service-details">Read More</Link>
+                </div>
+                <div className="it-service-4__overly"></div>
+              </div>
+            </div>
+            <div
+              className="col-span-2 mb-30 wow itfadeUp"
+              data-wow-duration=".9s"
+              data-wow-delay="1s"
+            >
+              <div className="it-service-4__item fix text-center">
+                <span>
+                  <i className="flaticon-analytics"></i>
+                </span>
+                <Link href="/service-details">
+                  <h5 className="it-service-4__title">
+                    Digital <br />
+                    Marketing
                   </h5>
                 </Link>
                 <div className="it-service-4__link">

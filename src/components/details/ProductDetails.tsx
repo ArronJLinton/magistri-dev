@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { data } from '@/components/project/ProjectHomeThree';
+import { useSearchParams } from 'next/navigation';
+
 interface ProductDetailsProps {
   projectData: {
     id: number;
@@ -15,7 +17,10 @@ interface ProductDetailsProps {
   };
 }
 
-const ProductDetails = ({ projectData }: ProductDetailsProps) => {
+const ProductDetails = () => {
+  const searchParams = useSearchParams();
+  const projectData = JSON.parse(searchParams.get('data') || '{}');
+  console.log(projectData);
   return (
     <>
       <div className="it-project-details__area pb-90">
