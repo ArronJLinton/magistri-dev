@@ -1,29 +1,30 @@
-
+'use client';
 
 import Breadcrumb from '@/components/common/Breadcrumb';
 import ProductDetails from '@/components/details/ProductDetails';
 import FooterOne from '@/layouts/footers/FooterOne';
-import HeaderFour from '@/layouts/headers/HeaderFour';
+import HeaderThree from '@/layouts/headers/HeaderThree';
 import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
+import { Suspense } from 'react';
 
+// export const metadata = {
+//   title: 'NUMBER 2',
+// };
 
-export const metadata = {
-  title: "Project Details Tecch - Technology & IT Solutions Next js Template",
-};
-
-const index = () => {
+const ProjectDetails = () => {
   return (
     <Wrapper>
-      <HeaderFour />
+      <HeaderThree />
       <main>
         <Breadcrumb title="Project Details" subtitle="Project Details" />
-        <ProductDetails />      
+        <Suspense fallback={<div>Loading...</div>}>
+          <ProductDetails />
+        </Suspense>
       </main>
       <FooterOne />
-      
     </Wrapper>
   );
 };
 
-export default index;
+export default ProjectDetails;

@@ -1,5 +1,3 @@
-
-
 import Breadcrumb from '@/components/common/Breadcrumb';
 import CtaHomeOne from '@/components/cta/CtaHomeOne';
 import Project from '@/components/project/Project';
@@ -8,9 +6,8 @@ import HeaderFour from '@/layouts/headers/HeaderFour';
 import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
-
 export const metadata = {
-  title: "Project Tecch - Technology & IT Solutions Next js Template",
+  title: 'SAME PROJECT',
 };
 
 const index = () => {
