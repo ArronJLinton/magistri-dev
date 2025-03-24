@@ -78,11 +78,11 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Debug Build Output
-        run: ls -R .out
+        run: ls -R .next
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .out/ # Ensure the correct path is used
+          path: .next/ # Ensure the correct path is used
 
   # Deployment job
   deploy:
