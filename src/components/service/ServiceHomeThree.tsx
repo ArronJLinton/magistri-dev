@@ -41,15 +41,15 @@ const ServiceHomeThree = () => {
                 <span>
                   <i className="flaticon-digital-marketing"></i>
                 </span>
-                <Link href="/service-details">
+                <Link href="/#services">
                   <h5 className="it-service-4__title">
                     Digital <br />
                     Marketing
                   </h5>
                 </Link>
-                <div className="it-service-4__link">
-                  <Link href="/service-details">Read More</Link>
-                </div>
+                // <div className="it-service-4__link">
+                //   <Link href="/#services">Read More</Link>
+                // </div>
                 <div className="it-service-4__overly"></div>
               </div>
             </div> */}
@@ -63,15 +63,15 @@ const ServiceHomeThree = () => {
                 <span>
                   <i className="flaticon-web-design"></i>
                 </span>
-                <Link href="/service-details">
+                <Link href="/#services">
                   <h5 className="it-service-4__title">
                     UI/UX <br />
                     Designing
                   </h5>
                 </Link>
-                <div className="it-service-4__link">
-                  <Link href="/service-details">Read More</Link>
-                </div>
+                {/* <div className="it-service-4__link">
+                  <Link href="/#services">Read More</Link>
+                </div> */}
                 <div className="it-service-4__overly"></div>
               </div>
             </div>
@@ -84,15 +84,15 @@ const ServiceHomeThree = () => {
                 <span>
                   <i className="flaticon-bar-chart"></i>
                 </span>
-                <Link href="/service-details">
+                <Link href="/#services">
                   <h5 className="it-service-4__title">
                     Web <br />
                     Development
                   </h5>
                 </Link>
-                <div className="it-service-4__link">
-                  <Link href="/service-details">Read More</Link>
-                </div>
+                {/* <div className="it-service-4__link">
+                  <Link href="/#services">Read More</Link>
+                </div> */}
                 <div className="it-service-4__overly"></div>
               </div>
             </div>
@@ -105,14 +105,14 @@ const ServiceHomeThree = () => {
                 <span>
                   <i className="flaticon-support"></i>
                 </span>
-                <Link href="/service-details">
+                <Link href="/#services">
                   <h5 className="it-service-4__title">
                     Mobile <br /> Development <br />
                   </h5>
                 </Link>
-                <div className="it-service-4__link">
-                  <Link href="/service-details">Read More</Link>
-                </div>
+                {/* <div className="it-service-4__link">
+                  <Link href="/#services">Read More</Link>
+                </div> */}
                 <div className="it-service-4__overly"></div>
               </div>
             </div>
@@ -125,15 +125,15 @@ const ServiceHomeThree = () => {
                 <span>
                   <i className="flaticon-analytics"></i>
                 </span>
-                <Link href="/service-details">
+                <Link href="/#services">
                   <h5 className="it-service-4__title">
                     AI Agent <br />
                     Development
                   </h5>
                 </Link>
-                <div className="it-service-4__link">
-                  <Link href="/service-details">Read More</Link>
-                </div>
+                {/* <div className="it-service-4__link">
+                  <Link href="/#services">Read More</Link>
+                </div> */}
                 <div className="it-service-4__overly"></div>
               </div>
             </div>
@@ -146,15 +146,15 @@ const ServiceHomeThree = () => {
                 <span>
                   <i className="flaticon-analytics"></i>
                 </span>
-                <Link href="/service-details">
+                <Link href="/#services">
                   <h5 className="it-service-4__title">
                     Digital <br />
                     Marketing
                   </h5>
                 </Link>
-                <div className="it-service-4__link">
-                  <Link href="/service-details">Read More</Link>
-                </div>
+                {/* <div className="it-service-4__link">
+                  <Link href="/#services">Read More</Link>
+                </div> */}
                 <div className="it-service-4__overly"></div>
               </div>
             </div>
@@ -165,7 +165,7 @@ const ServiceHomeThree = () => {
               <div className="it-service-4__bottom-text text-center pt-20">
                 <span>
                   Need digital marketing solutions & services?{' '}
-                  <Link href="/service-details">Send a request now</Link>
+                  <Link href="/#services">Send a request now</Link>
                 </span>
               </div>
             </div>

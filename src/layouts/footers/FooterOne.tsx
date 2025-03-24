@@ -63,11 +63,11 @@ const FooterOne = ({ style_2 }: any) => {
                     <ul>
                       <li>
                         <i className="flaticon-next"></i>
-                        <a href="#">About Us</a>
+                        <a href="/">About Us</a>
                       </li>
                       <li>
                         <i className="flaticon-next"></i>
-                        <a href="#">Contact Team</a>
+                        <a href="/#services">Our Services</a>
                       </li>
                       {/* <li>
                         <i className="flaticon-next"></i>
@@ -75,11 +75,11 @@ const FooterOne = ({ style_2 }: any) => {
                       </li> */}
                       <li>
                         <i className="flaticon-next"></i>
-                        <a href="#">Our Projects</a>
+                        <a href="/#projects">Our Projects</a>
                       </li>
                       <li>
                         <i className="flaticon-next"></i>
-                        <a href="#">Contact</a>
+                        <a href="/contact">Contact</a>
                       </li>
                     </ul>
                   </div>
