@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const ProjectHomeThree = () => {
   return (
     <>
-      <div className="it-project-5__area pt-115 pb-115">
+      <div id="projects" className="it-project-5__area pt-115 pb-115">
         <div className="">
           <div className="container">
             <div className="row">

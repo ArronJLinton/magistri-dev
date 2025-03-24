@@ -7,12 +7,12 @@ const menu_data = [
   {
     id: 1,
     title: 'Home',
-    link: '#',
-    img_dropdown: true,
+    link: '/',
+    img_dropdown: false,
     sub_menus: [
-      { link: '/home-3', title: 'Home 01', demo_img: home_demo_1 },
-      { link: '/home-2', title: 'Home 02', demo_img: home_demo_2 },
-      { link: '/', title: 'Home', demo_img: home_demo_3 },
+      // { link: '/home-3', title: 'Home 01', demo_img: home_demo_1 },
+      // { link: '/home-2', title: 'Home 02', demo_img: home_demo_2 },
+      // { link: '/', title: 'Home', demo_img: home_demo_3 },
     ],
   },
   //   {
@@ -37,8 +37,8 @@ const menu_data = [
   {
     id: 3,
     title: 'Services',
-    link: '#',
-    has_dropdown: true,
+    link: '/#services',
+    has_dropdown: false,
     sub_menus: [
       { link: '/service', title: 'service' },
       { link: '/service-details', title: 'service details' },
@@ -47,8 +47,8 @@ const menu_data = [
   {
     id: 4,
     title: 'Projects',
-    link: '#',
-    has_dropdown: true,
+    link: '/#sprojects',
+    has_dropdown: false,
     sub_menus: [
       { link: '/project', title: 'Project' },
       { link: '/project-details', title: 'Project details' },
