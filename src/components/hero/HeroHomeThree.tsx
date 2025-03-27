@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 
 const HeroHomeThree = () => {
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
@@ -42,18 +43,27 @@ const HeroHomeThree = () => {
           <SwiperSlide className="swiper-slide">
             <div className="it-slider__area it-slider__height it-slider__overlay bg-color-blue p-relative">
               <div className="it-slider__shape-1">
-                <img
-                  src="assets/img/slider/slider-shape-3-2.png"
-                  alt="rk-theme"
+                <Image
+                  src="/assets/img/slider/slider-shape-3-2.png"
+                  alt="shape"
+                  width={200}
+                  height={200}
                 />
               </div>
               <div className="it-slider__shape-2">
-                <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
+                <Image
+                  src="/assets/img/slider/shape-4-2.png"
+                  alt="shape"
+                  width={200}
+                  height={200}
+                />
               </div>
               <div className="it-slider__shape-3 d-none d-xl-block">
-                <img
-                  src="assets/img/slider/slider-shape-1-3.png"
-                  alt="rk-theme"
+                <Image
+                  src="/assets/img/slider/slider-shape-1-3.png"
+                  alt="shape"
+                  width={200}
+                  height={200}
                 />
               </div>
               <div
@@ -77,10 +87,10 @@ const HeroHomeThree = () => {
                         </span>
                       </div>
 
-                      <div className="it-slider__button flex justify-center items-center">
+                      <div className="flex justify-center items-center">
                         <Link
                           className="it-btn self-center flex justify-center items-center"
-                          href="/about-us"
+                          href="/#about-us"
                         >
                           <div>discover more</div>
                         </Link>
