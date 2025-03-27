@@ -47,7 +47,7 @@ const menu_data = [
   {
     id: 4,
     title: 'Projects',
-    link: '/#sprojects',
+    link: '/#projects',
     has_dropdown: false,
     sub_menus: [
       { link: '/project', title: 'Project' },

@@ -79,6 +79,13 @@ const HeaderThree = () => {
                     alt="rk-theme"
                     className="hidden md:block w-full h-[200px] object-contain"
                   />
+                  <Link href="/">
+                    <img
+                      className="w-1/3 h-auto block md:hidden"
+                      src="assets/img/logo/magistri-dev-logo-mobile.png"
+                      alt="rk-theme"
+                    />
+                  </Link>
                 </Link>
                 {/* </div> */}
                 <div className="flex flex-row">
@@ -88,25 +95,17 @@ const HeaderThree = () => {
                         <NavMenu />
                       </nav>
                     </div>
-                    <div className="it-header__main-logo d-xl-none">
-                      <Link href="/">
-                        <img
-                          className="w-2/5 h-auto"
-                          src="assets/img/logo/magistri-dev-logo-mobile.png"
-                          alt="rk-theme"
-                        />
-                      </Link>
-                    </div>
+                    <div className="flex justify-start it-header__main-logo d-md-none"></div>
                   </div>
 
-                  <div className="">
+                  <div className="mt-1 mr-5">
                     <div className="it-header__right-box d-flex align-items-center justify-content-end">
                       {/* <div className="it-header__btn d-none d-md-block">
                         <a className="it-btn" href="#">
                           <span>Get solution</span>
                         </a>
                       </div> */}
-                      <div className="it-header__bar d-xl-none">
+                      <div className="it-header__bar d-xl-none ">
                         <button className="it-menu-bar">
                           <span onClick={() => setOpenSidebar(!openSidebar)}>
                             <i className="fa-regular fa-bars"></i>
