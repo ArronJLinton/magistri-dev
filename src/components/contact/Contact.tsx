@@ -41,19 +41,18 @@ const Contact = () => {
                     <li>
                       <div className="it-contact__list">
                         <span>Phone</span>
-                        <a href="tel:09354587874">+1 (908) 251 2389</a>
+                        <a href="tel:+19082512389">+1 (908) 251 2389</a>
                       </div>
                     </li>
                     <li>
                       <div className="it-contact__list">
                         <span>Email</span>
-                        <a href="mailto:info@example.com">
-                          magistri.dev@gmail.com
+                        <a href="mailto:arron@magistri.dev">
+                          arron@magistri.dev
                         </a>
                       </div>
                     </li>
                   </ul>
-                  {/* <a href="mailto:www.example.com">www.example.com</a> */}
                 </div>
               </div>
             </div>

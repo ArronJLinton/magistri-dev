@@ -77,7 +77,7 @@ const HeaderThree = () => {
                   <img
                     src="assets/img/logo/magistri-dev-logo.png"
                     alt="rk-theme"
-                    className="hidden md:block w-full h-[200px] object-contain"
+                    className="hidden md:block w-full h-[150px] object-contain"
                   />
                   <Link href="/">
                     <img

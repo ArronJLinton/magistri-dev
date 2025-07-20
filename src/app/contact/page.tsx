@@ -8,7 +8,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: 'Contact Tecch - Technology & IT Solutions Next js Template',
+  title: 'Contact Magistri Dev',
 };
 
 const index = () => {
@@ -18,7 +18,7 @@ const index = () => {
       <main>
         <Breadcrumb title="Contact" subtitle="Contact" />
         <Contact />
-        <ContactForm />
+        {/* <ContactForm /> */}
         {/* <CtaHomeOne style_2={true} /> */}
       </main>
       <FooterOne />

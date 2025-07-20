@@ -5,7 +5,7 @@ import Link from 'next/link';
 const AboutHomeThree = () => {
   return (
     <>
-      <div className="it-about-5__area pt-120 pb-90">
+      <div id="about-us" className="it-about-5__area pt-120 pb-90">
         <div className="container">
           <div className="row align-items-start">
             <div
@@ -47,10 +47,10 @@ const AboutHomeThree = () => {
                   </ul>
                 </div>
                 <div className="it-about-5__button-box mb-15 d-flex">
-                  <Link className="it-btn" href="/about-us">
+                  <Link className="it-btn" href="#projects">
                     <span>discover more</span>
                   </Link>
-                  <div className="it-about-5__experience-box d-flex align-items-end">
+                  {/* <div className="it-about-5__experience-box d-flex align-items-end">
                     <h6
                       data-purecounter-duration="1"
                       data-purecounter-end="10"
@@ -61,7 +61,7 @@ const AboutHomeThree = () => {
                     <span>
                       Years of <br /> Experience
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
