@@ -24,7 +24,7 @@ const FooterOne = ({ style_2 }: any) => {
                     <img
                       src="assets/img/logo/magistri-dev-logo.png"
                       alt="rk-theme"
-                      className="w-1/2 sm:w-full object-contain"
+                      className="w-1/2 sm:w-full h-[200px] object-contain"
                     />
                   </a>
                   {/* </div> */}
@@ -44,7 +44,7 @@ const FooterOne = ({ style_2 }: any) => {
                           className={`color ${style_2 ? 'color-red' : ''}`}
                           href="mailto:www.tecch.rk-theme.com"
                         >
-                          www.tecch.rk-theme.com
+                          www.tecch.rk-theme.com`
                         </a>
                       </li> */}
                   {/* </ul> */}
