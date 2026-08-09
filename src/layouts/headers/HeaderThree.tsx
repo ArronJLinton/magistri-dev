@@ -1,127 +1,80 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState } from 'react';
-import NavMenu from './Menu/nav-menu';
+import { usePathname } from 'next/navigation';
 import useSticky from '@/hooks/use-sticky';
-import Search from '@/components/common/Search';
 import Offcanvus from '@/components/common/Offcanvus';
+
+const navLinks = [
+  { title: 'Services', href: '/#services', match: 'services' },
+  { title: 'Projects', href: '/projects', match: 'projects' },
+  { title: 'Contact', href: '/contact', match: 'contact' },
+];
 
 const HeaderThree = () => {
   const { sticky } = useSticky();
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const [openSidebar, setOpenSidebar] = useState(false);
+
+  const isActive = (match: string) => {
+    if (match === 'projects') {
+      return pathname === '/projects' || pathname.startsWith('/projects/');
+    }
+    if (match === 'contact') {
+      return pathname === '/contact';
+    }
+    return false;
+  };
 
   return (
     <>
-      <header className="it-header-height">
-        {/* <!-- header-area-start --> */}
-        {/* <div className="it-header-top__area theme-bg pt-10 pb-10">
-          <div className="container container-large">
-            <div className="row align-items-center">
-              <div className="col-xl-4 col-lg-3 d-none d-lg-block">
-                <div className="it-header-top__social">
-                  <a href="#">
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-7 col-md-8 col-sm-6">
-                <div className="it-header-top__left-box text-sm-start text-center">
-                  <span>
-                    <i className="fa-light fa-envelope"></i>
-                    <a href="mailto:jamilrayhan10.com">info.rk-theme.com</a>
-                  </span>
-                  <span className="d-none d-md-inline-block">
-                    <i className="fa-light fa-phone-rotary"></i>
-                    <a href="tel:+999008756">+ 999008756</a>
-                  </span>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-2 col-md-4 col-sm-6 d-none d-sm-block">
-                <div className="it-header-top__right-box text-end">
-                  <button
-                    className="search-open-btn"
-                    onClick={() => setOpen(!open)}
-                  >
-                    <i className="fa-sharp fa-light fa-magnifying-glass"></i>
-                  </button>
-                  <Link href="/cart">
-                    <i className="fa-sharp fa-light fa-cart-shopping"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        <div className="it-transparent">
-          <div
-            id="header-sticky"
-            className={`it-header__area it-header__style-3 z-index-5 ${
-              sticky ? 'header-sticky' : ''
-            }`}
-          >
-            <div className="">
-              <div className="flex justify-between it-header__wrap p-relative">
-                {/* <div className="it-header__logo d-none d-xl-block"> */}
-                <Link href="/">
-                  <img
-                    src="assets/img/logo/magistri-dev-logo.png"
-                    alt="rk-theme"
-                    className="hidden md:block w-full h-[150px] object-contain"
-                  />
-                  <Link href="/">
-                    <img
-                      className="w-1/3 h-auto block md:hidden"
-                      src="assets/img/logo/magistri-dev-logo-mobile.png"
-                      alt="rk-theme"
-                    />
-                  </Link>
-                </Link>
-                {/* </div> */}
-                <div className="flex flex-row">
-                  <div className="flex items-center">
-                    <div className="it-header__menu d-none d-xl-block text-center">
-                      <nav className="it-menu-content">
-                        <NavMenu />
-                      </nav>
-                    </div>
-                    <div className="flex justify-start it-header__main-logo d-md-none"></div>
-                  </div>
+      <header className={`md-home-header ${sticky ? 'is-sticky' : ''}`}>
+        <div className="md-container">
+          <div className="md-header-inner">
+            <Link href="/" className="md-logo">
+              <Image
+                src="/assets/img/logo/magistri-dev-logo-mobile.png"
+                alt="Magistri Dev"
+                width={140}
+                height={42}
+                priority
+              />
+              <span className="d-none d-sm-inline">Magistri Dev</span>
+            </Link>
 
-                  <div className="mt-1 mr-5">
-                    <div className="it-header__right-box d-flex align-items-center justify-content-end">
-                      {/* <div className="it-header__btn d-none d-md-block">
-                        <a className="it-btn" href="#">
-                          <span>Get solution</span>
-                        </a>
-                      </div> */}
-                      <div className="it-header__bar d-xl-none ">
-                        <button className="it-menu-bar">
-                          <span onClick={() => setOpenSidebar(!openSidebar)}>
-                            <i className="fa-regular fa-bars"></i>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <nav className="md-nav" aria-label="Primary">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={isActive(link.match) ? 'is-active' : undefined}
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="md-header-actions">
+              <Link
+                href="/contact"
+                className="md-btn md-btn-primary d-none d-md-inline-flex"
+              >
+                Get Started
+              </Link>
+              <button
+                type="button"
+                className="md-menu-btn"
+                aria-label="Open menu"
+                onClick={() => setOpenSidebar(true)}
+              >
+                <i className="fa-regular fa-bars" />
+              </button>
             </div>
           </div>
         </div>
-        {/* <!-- header-area-end --> */}
       </header>
-      <Search open={open} setOpen={setOpen} />
       <Offcanvus openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
     </>
   );

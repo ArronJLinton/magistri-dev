@@ -1,79 +1,40 @@
 import React from 'react';
 
+const features = [
+  {
+    title: 'Best Business Solution',
+    description: 'Tech that fits your business—built right, built to last.',
+    icon: 'fa-regular fa-lightbulb',
+  },
+  {
+    title: 'Business Growth',
+    description: 'Software solutions designed to accelerate your growth.',
+    icon: 'fa-regular fa-chart-line',
+  },
+  {
+    title: 'Brand Awareness',
+    description: 'Helping your customers discover and trust your brand.',
+    icon: 'fa-regular fa-globe',
+  },
+];
+
 const FeatureHomeThree = () => {
   return (
-    <>
-      <div className="it-feature-3__area it-feature-3__style">
-        <div
-          className="it-feature-3__bg-2 it-feature-3__plr pt-100 pb-90"
-          style={{
-            backgroundImage: `url(/assets/img/feature/feature-3-1.jpg)`,
-          }}
-        >
-          <div className="container-fluid">
-            <div className="row">
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 mb-30 wow itfadeUp"
-                data-wow-duration=".9s"
-                data-wow-delay=".3s"
-              >
-                <div className="it-feature__item d-flex align-items-center fix">
-                  <div className="it-feature__icon">
-                    <span>
-                      <i className="fa-regular fa-chart-mixed"></i>
-                    </span>
-                  </div>
-                  <div className="it-feature__text">
-                    <h4 className="it-feature__title-sm">
-                      Best Business Solution
-                    </h4>
-                    <p>
-                      Tech that fits your business—built right, built to last.
-                    </p>
-                  </div>
-                </div>
+    <section className="md-features">
+      <div className="md-container">
+        <div className="md-features-grid">
+          {features.map((feature) => (
+            <article key={feature.title} className="md-feature-item">
+              <div className="md-feature-icon">
+                <i className={feature.icon} />
               </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 mb-30 wow itfadeUp"
-                data-wow-duration=".9s"
-                data-wow-delay=".5s"
-              >
-                <div className="it-feature__item d-flex align-items-center fix">
-                  <div className="it-feature__icon">
-                    <span>
-                      <i className="fa-regular fa-chart-mixed"></i>
-                    </span>
-                  </div>
-                  <div className="it-feature__text">
-                    <h4 className="it-feature__title-sm">Business Growth</h4>
-                    <p>
-                      Software solutions designed to accelerate your growth.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 mb-30 wow itfadeUp"
-                data-wow-duration=".9s"
-                data-wow-delay=".7s"
-              >
-                <div className="it-feature__item d-flex align-items-center fix">
-                  <div className="it-feature__icon">
-                    <span>
-                      <i className="fa-regular fa-chart-mixed"></i>
-                    </span>
-                  </div>
-                  <div className="it-feature__text">
-                    <h4 className="it-feature__title-sm">Brand Awareness</h4>
-                    <p>Helping your customers discover and trust your brand.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </article>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

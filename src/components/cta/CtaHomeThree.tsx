@@ -1,32 +1,20 @@
-
-
 import Link from 'next/link';
 import React from 'react';
 
 const CtaHomeThree = () => {
   return (
-    <>
-      <div className="it-cta-3__area">
-        <div className="container">
-          <div className="it-cta-3__plr theme-bg">
-            <div className="row align-items-center">
-              <div className="col-xl-6 col-lg-5 col-md-6">
-                <div className="it-cta-3__text z-index">
-                  <h4 className="it-cta-3__title text-white">We are Ready <br />
-                    Develop Your Site!</h4>
-                </div>
-              </div>
-              <div className="col-xl-6 col-lg-7 col-md-6">
-                <div className="it-cta-3__text text-start text-md-end">
-                  <Link className="it-btn white-bg-color" href="/service-details"><span>SERVICE
-                    MORE</span></Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="md-cta">
+      <div className="md-container md-fade-up">
+        <h2>Ready to build your next solution?</h2>
+        <p>
+          Partner with Magistri Dev to design, ship, and scale software that
+          moves your business forward.
+        </p>
+        <Link href="/contact" className="md-btn md-btn-blue">
+          Schedule a Consultation
+        </Link>
       </div>
-    </>
+    </section>
   );
 };
 

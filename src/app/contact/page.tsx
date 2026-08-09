@@ -1,29 +1,27 @@
-import Breadcrumb from '@/components/common/Breadcrumb';
-import Contact from '@/components/contact/Contact';
-import CtaHomeOne from '@/components/cta/CtaHomeOne';
-import ContactForm from '@/components/form/ContactForm';
-import FooterOne from '@/layouts/footers/FooterOne';
-import HeaderThree from '@/layouts/headers/HeaderThree';
-import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
+import Wrapper from '@/layouts/Wrapper';
+import HeaderThree from '@/layouts/headers/HeaderThree';
+import FooterOne from '@/layouts/footers/FooterOne';
+import ContactPageContent from '@/components/contact/ContactPageContent';
 
 export const metadata = {
-  title: 'Contact Magistri Dev',
+  title: 'Contact | Magistri Dev',
+  description:
+    'Contact Magistri Dev to discuss AI solutions, software engineering, and product development.',
 };
 
-const index = () => {
+const ContactPage = () => {
   return (
     <Wrapper>
-      <HeaderThree />
-      <main>
-        <Breadcrumb title="Contact" subtitle="Contact" />
-        <Contact />
-        {/* <ContactForm /> */}
-        {/* <CtaHomeOne style_2={true} /> */}
-      </main>
-      <FooterOne />
+      <div className="md-home">
+        <HeaderThree />
+        <main>
+          <ContactPageContent />
+        </main>
+        <FooterOne />
+      </div>
     </Wrapper>
   );
 };
 
-export default index;
+export default ContactPage;
