@@ -1,90 +1,46 @@
+import Image from 'next/image';
 import React from 'react';
-import Count from '../common/count';
-import Link from 'next/link';
+
+const points = [
+  'Your trusted partner in navigating the digital landscape.',
+  'Empowering businesses with seamless, scalable technology.',
+  'Bringing innovation and expertise to every project we start.',
+];
 
 const AboutHomeThree = () => {
   return (
-    <>
-      <div id="about-us" className="it-about-5__area pt-120 pb-90">
-        <div className="container">
-          <div className="row align-items-start">
-            <div
-              className="col-xl-6 col-lg-6 wow itfadeLeft"
-              data-wow-duration=".9s"
-              data-wow-delay=".5s"
-            >
-              <div className="it-about-5__left-box">
-                <div className="it-about-5__section-box mb-15">
-                  <span className="it-section-subtitle-5">
-                    ABOUT OUR COMPANY
+    <section id="about-us" className="md-about">
+      <div className="md-container">
+        <div className="md-about-grid">
+          <div>
+            <h2>
+              We deliver reliable, tailored software solutions to drive your
+              business forward
+            </h2>
+            <ul>
+              {points.map((point) => (
+                <li key={point}>
+                  <span className="md-check" aria-hidden="true">
+                    <i className="fa-solid fa-check" />
                   </span>
-                  <h4 className="it-section-title">
-                    We deliver reliable, tailored software solutions to drive
-                    your business forward
-                  </h4>
-                </div>
-                {/* <div className="it-about-5__text mb-35">
-                  <p>
-                    Porem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                    Aenean sollicitudin, lorem is simply free text quis
-                    bibendum. There are many variations of passages of available
-                  </p>
-                </div> */}
-                <div className="it-about-5__fea-list mb-40">
-                  <ul>
-                    <li>
-                      <i className="flaticon-check-mark"></i>Your trusted
-                      partner in navigating the digital landscape
-                    </li>
-                    <li>
-                      <i className="flaticon-check-mark"></i>Empowering
-                      businesses with seamless, scalable technology
-                    </li>
-                    <li>
-                      <i className="flaticon-check-mark"></i>Bringing the latest
-                      tech to power your business success
-                    </li>
-                  </ul>
-                </div>
-                <div className="it-about-5__button-box mb-15 d-flex">
-                  <Link className="it-btn" href="#projects">
-                    <span>discover more</span>
-                  </Link>
-                  {/* <div className="it-about-5__experience-box d-flex align-items-end">
-                    <h6
-                      data-purecounter-duration="1"
-                      data-purecounter-end="10"
-                      className="purecounter"
-                    >
-                      <Count number={10} />
-                    </h6>
-                    <span>
-                      Years of <br /> Experience
-                    </span>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="it-about-5__thumb-box p-relative text-center text-lg-end">
-                <div className="it-about-5__thumb">
-                  <img src="assets/img/about/about-5-1.jpg" alt="rk-theme" />
-                </div>
-                <div className="it-about-5__thumb-sm">
-                  <img src="assets/img/about/about-5-2.jpg" alt="rk-theme" />
-                </div>
-                <div className="it-about-5__shape-1 d-none d-xl-block">
-                  <img src="assets/img/about/shape-5-1.png" alt="rk-theme" />
-                </div>
-                <div className="it-about-5__shape-2 d-none d-xxl-block">
-                  <img src="assets/img/about/shape-5-2.png" alt="rk-theme" />
-                </div>
-              </div>
-            </div>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md-about-media">
+            <Image
+              src="/assets/img/about/about-5-1.jpg"
+              alt="Team collaborating around a workspace table"
+              width={640}
+              height={820}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

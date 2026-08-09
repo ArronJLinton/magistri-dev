@@ -1,125 +1,90 @@
-'use client';
-
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { projects } from '@/data/projects';
+
+export { projects as data } from '@/data/projects';
 
 const ProjectHomeThree = () => {
-  return (
-    <>
-      <div id="projects" className="it-project-5__area pt-115 pb-115">
-        <div className="">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="it-project-5__section-box text-center">
-                  <span className="it-section-subtitle-5">OUR SHOWCASE</span>
-                  <h4 className="it-section-title">
-                    Check Our Latest Projects
-                  </h4>
-                </div>
-              </div>
-            </div>
+  const featured = projects.find((item) => item.featured) ?? projects[0];
+  const secondary = projects.filter((item) => item.id !== featured.id);
 
-            <div className="">
-              <div className="py-6 xl:py-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-20 xl:gap-96 relative">
-                  {data.map((e, i) => (
-                    <div
-                      key={e.id}
-                      className="relative flex justify-center items-center self-center"
-                    >
-                      <Link
-                        href={{
-                          pathname: '/project-details',
-                          query: { data: JSON.stringify(e) },
-                        }}
-                      >
-                        <div className="relative flex justify-center items-center">
-                          {/* MacBook - Layered behind with actual frame */}
-                          <div className="absolute w-full xl:w-[450px] opacity-80 z-0 flex justify-center">
-                            <img
-                              src={e.desktop}
-                              alt={e.title}
-                              className="w-full h-full relative top-6"
-                            />
-                          </div>
-                          {/* iPhone - Left with actual frame */}
-                          <div className="relative w-[100px] z-10 -translate-x-24 flex justify-center">
-                            <img
-                              src={e.mobile}
-                              alt={e.title}
-                              className="w-full h-full relative top-20"
-                            />
-                          </div>
-                          {/* Tablet - Right with actual frame */}
-                          <div className="relative w-[200px] z-10 translate-x-24 flex justify-center">
-                            <img
-                              src={e.tablet}
-                              alt={e.title}
-                              className="w-full h-auto relative top-20 right-0"
-                            />
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+  return (
+    <section id="projects" className="md-projects">
+      <div className="md-container">
+        <div className="md-projects-head">
+          <div>
+            <span className="md-label">Selected Work</span>
+            <h2>Proven Solutions for Real Businesses.</h2>
           </div>
+          <Link href="/projects" className="md-view-all">
+            View All Projects <i className="fa-regular fa-arrow-right" />
+          </Link>
+        </div>
+
+        <div className="md-featured">
+          <Link href={`/projects/details/${featured.id}`}>
+            <div className="md-project-media">
+              <Image
+                src={featured.desktop}
+                alt={`Desktop mockup of ${featured.title} website`}
+                width={720}
+                height={480}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+            <div className="md-tags">
+              {featured.tags?.map((tag) => (
+                <span key={tag} className="md-tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h3 className="md-project-title">{featured.title}</h3>
+            <p>{featured.description}</p>
+          </Link>
+
+          {featured.quote && (
+            <blockquote className="md-quote">
+              <div className="md-quote-mark" aria-hidden="true">
+                “
+              </div>
+              <p>{featured.quote}</p>
+            </blockquote>
+          )}
+        </div>
+
+        <div className="md-project-grid">
+          {secondary.map((project) => (
+            <Link
+              key={project.id}
+              href={`/projects/details/${project.id}`}
+              className="md-project-card"
+            >
+              <div className="md-project-media">
+                <Image
+                  src={project.desktop}
+                  alt={`Desktop mockup of ${project.title}`}
+                  width={640}
+                  height={420}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </div>
+              <div className="md-tags">
+                {project.tags?.map((tag) => (
+                  <span key={tag} className="md-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 className="md-project-title">{project.title}</h3>
+              <p>{project.description}</p>
+            </Link>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
 export default ProjectHomeThree;
-// src = 'assets/img/project/aquilini-wines-home.png';
-
-export const data = [
-  {
-    id: 1,
-    title: 'Aquilini Wines',
-    mobile: 'assets/img/project/aquilini-wines-mobile.png',
-    tablet: 'assets/img/project/aquilini-wines-tablet.png',
-    desktop: 'assets/img/project/aquilini-wines-desktop.png',
-    category: 'Website Design/Development',
-    client: 'Aquilini Wine Group',
-  },
-  {
-    id: 2,
-    title: 'My Aphasia Coach',
-    mobile: 'assets/img/project/aphasia-mobile.png',
-    tablet: 'assets/img/project/aphasia-tablet.png',
-    desktop: 'assets/img/project/aphasia-desktop.png',
-    ios: 'https://apps.apple.com/us/app/my-aphasia-coach/id1163288893?ls=1',
-    android: 'https://play.google.com/store/apps/details?id=com.myaphasiacoach',
-    category: 'Web/Mobile App Development',
-    client: 'Phasic Software, LLC',
-  },
-  {
-    id: 3,
-    title: 'The Takedown',
-    mobile: 'assets/img/project/takedown-mobile.png',
-    tablet: 'assets/img/project/takedown-tablet.png',
-    desktop: 'assets/img/project/takedown-desktop.png',
-    category: 'Web App Development, CMS',
-    client: 'The Takedown',
-  },
-  // {
-  //   id: 4,
-  //   title: 'Le Fashion Cottage',
-  //   mobile: 'assets/img/project/fashion-cottage-mobile.png',
-  //   tablet: 'assets/img/project/fashion-cottage-tablet.png',
-  //   desktop: 'assets/img/project/fashion-cottage-desktop.png',
-  // },
-  // {
-  //   id: 5,
-  //   title: 'Munca Technologies',
-  //   mobile: 'assets/img/project/munca-mobile.png',
-  //   tablet: 'assets/img/project/munca-tablet.png',
-  //   desktop: 'assets/img/project/munca-desktop.png',
-  // },
-];

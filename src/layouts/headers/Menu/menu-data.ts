@@ -47,11 +47,11 @@ const menu_data = [
   {
     id: 4,
     title: 'Projects',
-    link: '/#projects',
+    link: '/projects',
     has_dropdown: false,
     sub_menus: [
-      { link: '/project', title: 'Project' },
-      { link: '/project-details', title: 'Project details' },
+      { link: '/projects', title: 'Project' },
+      { link: '/projects/details/1', title: 'Project details' },
     ],
   },
   // {

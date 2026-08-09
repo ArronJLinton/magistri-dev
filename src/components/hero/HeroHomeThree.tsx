@@ -1,118 +1,46 @@
-'use client';
-
-import VideoPopup from '@/modals/VideoPopup';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 const HeroHomeThree = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
-
   return (
-    <>
-      <div className="it-slider__wrapper z-index fix">
-        <Swiper
-          loop={false}
-          slidesPerView={1}
-          spaceBetween={0}
-          effect="fade"
-          autoplay={true}
-          modules={[Autoplay, EffectFade, Pagination]}
-          pagination={{ el: '.it-slider-dots', clickable: true }}
-          breakpoints={{
-            '1200': {
-              slidesPerView: 1,
-            },
-            '992': {
-              slidesPerView: 1,
-            },
-            '768': {
-              slidesPerView: 1,
-            },
-            '576': {
-              slidesPerView: 1,
-            },
-            '0': {
-              slidesPerView: 1,
-            },
-          }}
-          className="swiper-container it-slider__active p-relative"
-        >
-          <SwiperSlide className="swiper-slide">
-            <div className="it-slider__area it-slider__height it-slider__overlay bg-color-blue p-relative">
-              <div className="it-slider__shape-1">
-                <Image
-                  src="/assets/img/slider/slider-shape-3-2.png"
-                  alt="shape"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div className="it-slider__shape-2">
-                <Image
-                  src="/assets/img/slider/shape-4-2.png"
-                  alt="shape"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div className="it-slider__shape-3 d-none d-xl-block">
-                <Image
-                  src="/assets/img/slider/slider-shape-1-3.png"
-                  alt="shape"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div
-                className="it-slider__bg"
-                style={{
-                  backgroundImage: `url(/assets/img/slider/slider-1-4.png)`,
-                }}
-              ></div>
-              <div className="container">
-                <div className="flex flex-row justify-center itemss-center">
-                  <div className="col-xl-12">
-                    <div className="it-slider__content-wrap">
-                      <div className="it-slider__content text-center">
-                        {/* <span className="it-slider-subtitle">SOLUTION FOR YOUR BUSINESS</span> */}
-                        <h2 className="it-slider-title mt-10 pb-30">
-                          Magistri Dev
-                          <br />
-                        </h2>
-                        <span className="it-slider-subtitle">
-                          We Build Software Solutions for your Business
-                        </span>
-                      </div>
-
-                      <div className="flex justify-center items-center">
-                        <Link
-                          className="it-btn self-center flex justify-center items-center"
-                          href="/#about-us"
-                        >
-                          <div>discover more</div>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <section className="md-hero">
+      <div className="md-container">
+        <div className="md-hero-grid">
+          <div className="md-fade-up">
+            <p className="md-eyebrow md-eyebrow-blue">
+              Software. Apps. Solutions.
+            </p>
+            <h1>We Build Software Solutions for your Business</h1>
+            <p className="md-hero-copy">
+              Empowering small to medium businesses with modern, scalable, and
+              intelligent software. From custom web applications to AI-driven
+              workflows.
+            </p>
+            <div className="md-hero-actions">
+              <Link href="/#services" className="md-btn md-btn-primary">
+                Explore Services <i className="fa-regular fa-arrow-right" />
+              </Link>
+              <Link href="/projects" className="md-btn md-btn-outline">
+                View Projects
+              </Link>
             </div>
-          </SwiperSlide>
-        </Swiper>
-        {/* <div className="it-slider-dots"></div> */}
-      </div>
+          </div>
 
-      {/* video modal start */}
-      {/* <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={'rhu7LAnc_kA'}
-      /> */}
-      {/* video modal end */}
-    </>
+          <div className="md-hero-media md-fade-up-delay">
+            <Image
+              src="/assets/img/home/hero-office.jpg"
+              alt="Consultant reviewing operations with a client on the warehouse floor"
+              fill
+              priority
+              quality={90}
+              sizes="(max-width: 991px) 100vw, (max-width: 1400px) 50vw, 900px"
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
