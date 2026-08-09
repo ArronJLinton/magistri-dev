@@ -33,10 +33,11 @@ const HeaderThree = () => {
       <header className={`md-home-header ${sticky ? 'is-sticky' : ''}`}>
         <div className="md-container">
           <div className="md-header-inner">
-            <Link href="/" className="md-logo">
+            <Link href="/" className="md-logo" aria-label="Magistri Dev">
               <Image
                 src="/assets/img/logo/magistri-dev-logo-mobile.png"
-                alt="Magistri Dev"
+                alt=""
+                aria-hidden="true"
                 width={420}
                 height={126}
                 priority

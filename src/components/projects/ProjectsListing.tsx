@@ -4,7 +4,8 @@ import React from 'react';
 import { projects } from '@/data/projects';
 
 const ProjectsListing = () => {
-  const featured = projects.find((p) => p.id === 3) ?? projects[projects.length - 1];
+  const featured =
+    projects.find((p) => p.featured) ?? projects[projects.length - 1];
   const gridProjects = projects.filter((p) => p.id !== featured.id);
 
   return (

@@ -31,7 +31,7 @@ const ProjectCaseStudy = ({ project }: { project: Project }) => {
                     <a
                       href={project.ios}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="md-store-btn md-store-btn-dark"
                     >
                       <i className="fa-brands fa-apple" />
@@ -42,7 +42,7 @@ const ProjectCaseStudy = ({ project }: { project: Project }) => {
                     <a
                       href={project.android}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="md-store-btn md-store-btn-light"
                     >
                       <i className="fa-brands fa-google-play" />

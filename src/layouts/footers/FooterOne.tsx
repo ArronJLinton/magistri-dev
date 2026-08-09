@@ -28,7 +28,7 @@ const FooterOne = ({ style_2 }: { style_2?: boolean }) => {
                 </a>
               </div>
               <div className="flex flex-col mb-30">
-                <h4 className="it-footer__widget-title">Usefull Links</h4>
+                <h4 className="it-footer__widget-title">Useful Links</h4>
                 <div className="it-footer__list">
                   <ul>
                     <li>
@@ -92,7 +92,7 @@ const FooterOne = ({ style_2 }: { style_2?: boolean }) => {
                   key={link.label}
                   href={link.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {link.label}
                 </a>
