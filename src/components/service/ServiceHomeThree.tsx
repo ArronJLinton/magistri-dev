@@ -6,14 +6,14 @@ const services = [
     title: 'Web & Mobile Development',
     icon: 'flaticon-support',
     description:
-      'Custom websites and mobile apps built for performance, usability, and long-term growth.',
+      'Full-stack solutions engineered for scale. We build responsive web applications and native mobile experiences that drive engagement and streamline operations for modern businesses.',
     learnMore: true,
   },
   {
     title: 'UI/UX Design',
     icon: 'flaticon-web-design',
     description:
-      'Clean interfaces and thoughtful experiences that help users convert and stay engaged.',
+      'Clean, minimal, and user-centric interfaces. We design digital products that look premium and function seamlessly.',
     learnMore: false,
   },
 ];
@@ -26,41 +26,56 @@ const AiArt = () => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
+    <defs>
+      <radialGradient id="aiGlow" cx="70%" cy="45%" r="50%">
+        <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.45" />
+        <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+      </radialGradient>
+    </defs>
+    <ellipse cx="210" cy="110" rx="110" ry="90" fill="url(#aiGlow)" />
     <rect
-      x="70"
-      y="28"
-      width="180"
-      height="150"
-      rx="18"
-      stroke="#60A5FA"
-      strokeWidth="3"
-      opacity="0.9"
-    />
-    <rect
-      x="92"
-      y="50"
-      width="136"
-      height="90"
-      rx="10"
+      x="78"
+      y="36"
+      width="164"
+      height="128"
+      rx="16"
       stroke="#93C5FD"
-      strokeWidth="2"
-      opacity="0.7"
+      strokeWidth="2.5"
+      opacity="0.95"
     />
-    <circle cx="160" cy="95" r="22" stroke="#60A5FA" strokeWidth="2.5" />
-    <path
-      d="M160 73V55M160 137V117M117 95H98M222 95H203M132 67L120 55M188 123L200 135M188 67L200 55M132 123L120 135"
+    <rect
+      x="98"
+      y="56"
+      width="124"
+      height="78"
+      rx="8"
       stroke="#60A5FA"
-      strokeWidth="2"
-      strokeLinecap="round"
+      strokeWidth="1.75"
+      opacity="0.75"
     />
-    <rect x="130" y="188" width="60" height="10" rx="5" fill="#2563EB" />
+    <circle cx="160" cy="95" r="18" stroke="#93C5FD" strokeWidth="2" />
     <path
-      d="M40 170C70 130 100 150 130 120C160 90 190 110 220 80C250 50 280 70 300 40"
-      stroke="#3B82F6"
-      strokeWidth="2"
+      d="M160 77V62M160 128V113M118 95H102M218 95H202M138 73L128 63M182 117L192 127M182 73L192 63M138 117L128 127"
+      stroke="#60A5FA"
+      strokeWidth="1.75"
       strokeLinecap="round"
-      opacity="0.45"
     />
+    <rect x="236" y="88" width="34" height="34" rx="6" stroke="#E2E8F0" strokeWidth="1.75" />
+    <path
+      d="M244 95H262M244 103H262M244 111H262M241 98V114M253 95V121M265 98V114"
+      stroke="#93C5FD"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+    />
+    <rect x="132" y="178" width="56" height="8" rx="4" fill="#2563EB" />
+    <circle cx="160" cy="36" r="3.5" fill="#60A5FA">
+      <animate
+        attributeName="opacity"
+        values="0.45;1;0.45"
+        dur="2.4s"
+        repeatCount="indefinite"
+      />
+    </circle>
   </svg>
 );
 
@@ -72,8 +87,9 @@ const ServiceHomeThree = () => {
           <span className="md-label">Our Capabilities</span>
           <h2>Scalable AI & Software Engineering</h2>
           <p>
-            From product design to intelligent automation, we help teams ship
-            software that is practical, maintainable, and ready to scale.
+            We bridge the gap between complex artificial intelligence and
+            practical business applications, delivering sleek, performant, and
+            intuitive tools.
           </p>
         </div>
 
@@ -98,21 +114,20 @@ const ServiceHomeThree = () => {
 
         <div className="md-ai-banner">
           <div>
-            <div className="md-ai-kicker">
-              <span />
-              Next-Gen AI Agents
-            </div>
+            <span className="md-ai-pill">Next-Gen</span>
             <h3>AI Agent Development</h3>
             <p>
-              Design and deploy intelligent agents that automate workflows,
-              support customers, and unlock faster decision-making across your
-              business.
+              Automate complex workflows, enhance customer support, and unlock
+              new capabilities with custom-trained artificial intelligence
+              models integrated directly into your infrastructure.
             </p>
             <Link href="/contact" className="md-btn md-btn-light">
-              Browse AI Solutions <i className="fa-regular fa-arrow-right" />
+              Explore AI Solutions <i className="fa-regular fa-arrow-right" />
             </Link>
           </div>
-          <AiArt />
+          <div className="md-ai-art-wrap">
+            <AiArt />
+          </div>
         </div>
       </div>
     </section>

@@ -154,40 +154,56 @@
   }
 
   .md-header-inner {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
-    min-height: 76px;
-    gap: 1rem;
+    justify-content: space-between;
+    min-height: 147px;
+    gap: 1.25rem;
   }
 
   .md-logo {
     display: inline-flex;
     align-items: center;
-    gap: 0.65rem;
+    flex-shrink: 0;
+    gap: 0.85rem;
     color: var(--md-ink);
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 1.15rem;
+    font-size: 1.94rem;
     letter-spacing: -0.02em;
     z-index: 1;
+    white-space: nowrap;
+  }
+
+  .md-logo-text {
+    display: none;
   }
 
   .md-logo img {
-    height: 42px;
+    height: 126px;
     width: auto;
+  }
+
+  .md-header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
   .md-nav {
     display: none;
     align-items: center;
-    gap: 2rem;
+    gap: 1.75rem;
 
     a {
       color: var(--md-ink-soft);
       font-weight: 500;
       font-size: 0.95rem;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
 
     a:hover {
@@ -222,18 +238,25 @@
     font-size: 1.25rem;
   }
 
-  @media (min-width: 992px) {
-    .md-header-inner {
-      grid-template-columns: 1fr auto 1fr;
+  @media (min-width: 576px) {
+    .md-logo-text {
+      display: inline;
     }
+  }
 
+  @media (min-width: 992px) {
     .md-nav {
       display: flex;
-      justify-self: center;
     }
 
     .md-menu-btn {
       display: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .md-header-right {
+      gap: 2.75rem;
     }
   }
 }
@@ -259,6 +282,10 @@
     margin-bottom: 1rem;
   }
 
+  .md-eyebrow-blue {
+    color: var(--md-blue);
+  }
+
   h1 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 800;
@@ -281,10 +308,11 @@
 
   .md-hero-media {
     position: relative;
-    border-radius: 1rem;
+    border-radius: 1.1rem;
     overflow: hidden;
     min-height: 280px;
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+    background: #e8eef5;
+    box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
   }
 
   .md-hero-media img {
@@ -294,15 +322,16 @@
   }
 
   @media (min-width: 992px) {
-    padding: 5rem 0 6rem;
+    padding: 5.5rem 0 6.5rem;
 
     .md-hero-grid {
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 3.5rem;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 3.75rem;
     }
 
     .md-hero-media {
-      min-height: 420px;
+      min-height: 460px;
+      aspect-ratio: 5 / 4;
     }
   }
 }
@@ -456,7 +485,7 @@
     margin-top: 1.25rem;
     border-radius: 1rem;
     background:
-      radial-gradient(circle at 85% 40%, rgba(37, 99, 235, 0.35), transparent 40%),
+      radial-gradient(circle at 88% 42%, rgba(59, 130, 246, 0.35), transparent 42%),
       linear-gradient(135deg, #0b1220 0%, #111827 55%, #0f172a 100%);
     color: white;
     padding: 2rem;
@@ -470,42 +499,47 @@
     color: white;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 800;
-    margin: 0.75rem 0 0.85rem;
+    margin: 0.85rem 0 0.85rem;
   }
 
   .md-ai-banner p {
     color: #cbd5e1;
-    max-width: 42ch;
+    max-width: 46ch;
     margin-bottom: 1.35rem;
   }
 
-  .md-ai-kicker {
+  .md-ai-pill {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #93c5fd;
   }
 
-  .md-ai-kicker span {
-    width: 0.45rem;
-    height: 0.45rem;
-    border-radius: 999px;
-    background: #60a5fa;
-    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
+  .md-ai-art-wrap {
+    justify-self: center;
+    width: min(300px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .md-ai-art {
-    justify-self: center;
-    width: min(280px, 100%);
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 28px rgba(96, 165, 250, 0.28));
   }
 
   @media (min-width: 768px) {
     .md-service-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: stretch;
     }
   }
 
@@ -513,7 +547,7 @@
     padding: 5.5rem 0;
 
     .md-ai-banner {
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
       padding: 2.75rem 3rem;
     }
   }

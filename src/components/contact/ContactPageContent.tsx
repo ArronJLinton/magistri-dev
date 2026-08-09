@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import React, { FormEvent, useState } from 'react';
 
 const ContactPageContent = () => {
@@ -58,16 +57,6 @@ const ContactPageContent = () => {
                 </div>
               </li>
             </ul>
-
-            <div className="md-contact-photo">
-              <Image
-                src="/assets/img/slider/slider-4-1.jpg"
-                alt="Modern office workspace"
-                width={720}
-                height={320}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
           </div>
 
           <div className="md-contact-form-card">
@@ -78,7 +67,6 @@ const ContactPageContent = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Jane Doe"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -90,7 +78,6 @@ const ContactPageContent = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="jane@company.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -102,7 +89,6 @@ const ContactPageContent = () => {
                 <textarea
                   name="details"
                   rows={6}
-                  placeholder="Briefly describe your AI integration needs..."
                   value={details}
                   onChange={(e) => setDetails(e.target.value)}
                   required

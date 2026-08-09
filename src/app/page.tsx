@@ -4,7 +4,6 @@ import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderThree from '@/layouts/headers/HeaderThree';
 import CtaHomeThree from '@/components/cta/CtaHomeThree';
 import HeroHomeThree from '@/components/hero/HeroHomeThree';
-import AboutHomeThree from '@/components/about/AboutHomeThree';
 import ProjectHomeThree from '@/components/project/ProjectHomeThree';
 import ServiceHomeThree from '@/components/service/ServiceHomeThree';
 import FeatureHomeThree from '@/components/feature/FeatureHomeThree';
@@ -20,7 +19,6 @@ const index = () => {
         <HeaderThree />
         <main>
           <HeroHomeThree />
-          <AboutHomeThree />
           <ServiceHomeThree />
           <ProjectHomeThree />
           <FeatureHomeThree />

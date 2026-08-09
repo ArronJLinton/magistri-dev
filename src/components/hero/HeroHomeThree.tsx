@@ -8,11 +8,14 @@ const HeroHomeThree = () => {
       <div className="md-container">
         <div className="md-hero-grid">
           <div className="md-fade-up">
-            <p className="md-eyebrow">Engagement. Results. Success.</p>
+            <p className="md-eyebrow md-eyebrow-blue">
+              Software. Apps. Solutions.
+            </p>
             <h1>We Build Software Solutions for your Business</h1>
             <p className="md-hero-copy">
-              Empowering small to medium businesses with high-performance,
-              scalable, and reliable technology tailored to your goals.
+              Empowering small to medium businesses with modern, scalable, and
+              intelligent software. From custom web applications to AI-driven
+              workflows.
             </p>
             <div className="md-hero-actions">
               <Link href="/#services" className="md-btn md-btn-primary">
@@ -26,11 +29,12 @@ const HeroHomeThree = () => {
 
           <div className="md-hero-media md-fade-up-delay">
             <Image
-              src="/assets/img/slider/slider-4-1.jpg"
-              alt="Team collaborating around software dashboards"
+              src="/assets/img/home/hero-office.jpg"
+              alt="Consultant reviewing operations with a client on the warehouse floor"
               fill
               priority
-              sizes="(max-width: 991px) 100vw, 520px"
+              quality={90}
+              sizes="(max-width: 991px) 100vw, (max-width: 1400px) 50vw, 900px"
               style={{ objectFit: 'cover' }}
             />
           </div>

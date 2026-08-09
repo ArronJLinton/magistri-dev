@@ -37,40 +37,42 @@ const HeaderThree = () => {
               <Image
                 src="/assets/img/logo/magistri-dev-logo-mobile.png"
                 alt="Magistri Dev"
-                width={140}
-                height={42}
+                width={420}
+                height={126}
                 priority
               />
-              <span className="d-none d-sm-inline">Magistri Dev</span>
+              <span className="md-logo-text">Magistri Dev</span>
             </Link>
 
-            <nav className="md-nav" aria-label="Primary">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={isActive(link.match) ? 'is-active' : undefined}
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
+            <div className="md-header-right">
+              <nav className="md-nav" aria-label="Primary">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={isActive(link.match) ? 'is-active' : undefined}
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </nav>
 
-            <div className="md-header-actions">
-              <Link
-                href="/contact"
-                className="md-btn md-btn-primary d-none d-md-inline-flex"
-              >
-                Get Started
-              </Link>
-              <button
-                type="button"
-                className="md-menu-btn"
-                aria-label="Open menu"
-                onClick={() => setOpenSidebar(true)}
-              >
-                <i className="fa-regular fa-bars" />
-              </button>
+              <div className="md-header-actions">
+                <Link
+                  href="/contact"
+                  className="md-btn md-btn-primary d-none d-md-inline-flex"
+                >
+                  Get Started
+                </Link>
+                <button
+                  type="button"
+                  className="md-menu-btn"
+                  aria-label="Open menu"
+                  onClick={() => setOpenSidebar(true)}
+                >
+                  <i className="fa-regular fa-bars" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
