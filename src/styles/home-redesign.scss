@@ -1171,9 +1171,25 @@
     justify-content: center;
     color: var(--md-ink);
     flex: 0 0 auto;
+    line-height: 1;
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      font-size: 0.95rem;
+    }
+
+    i::before {
+      margin: 0;
+      line-height: 1;
+    }
   }
 
-  .md-contact-list span {
+  .md-contact-list > li > div > span {
     display: block;
     font-size: 0.72rem;
     font-weight: 700;
