@@ -11,14 +11,14 @@ const HeroHomeThree = () => {
             <p className="md-eyebrow md-eyebrow-blue">
               Software. Apps. Solutions.
             </p>
-            <h1>We Build Software Solutions for your Business</h1>
+            <h1>We Build AI Solutions for your Business</h1>
             <p className="md-hero-copy">
               Empowering small to medium businesses with modern, scalable, and
               intelligent software. From custom web applications to AI-driven
               workflows.
             </p>
             <div className="md-hero-actions">
-              <Link href="/#services" className="md-btn md-btn-primary">
+              <Link href="/services" className="md-btn md-btn-primary">
                 Explore Services <i className="fa-regular fa-arrow-right" />
               </Link>
               <Link href="/projects" className="md-btn md-btn-outline">
@@ -30,7 +30,7 @@ const HeroHomeThree = () => {
           <div className="md-hero-media md-fade-up-delay">
             <Image
               src="/assets/img/home/hero-office.jpg"
-              alt="Consultant reviewing operations with a client on the warehouse floor"
+              alt="Consultant meeting with a client at their warehouse site"
               fill
               priority
               quality={90}

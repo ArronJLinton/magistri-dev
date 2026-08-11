@@ -8,7 +8,7 @@ import useSticky from '@/hooks/use-sticky';
 import Offcanvus from '@/components/common/Offcanvus';
 
 const navLinks = [
-  { title: 'Services', href: '/#services', match: 'services' },
+  { title: 'Services', href: '/services', match: 'services' },
   { title: 'Projects', href: '/projects', match: 'projects' },
   { title: 'Contact', href: '/contact', match: 'contact' },
 ];
@@ -21,6 +21,9 @@ const HeaderThree = () => {
   const isActive = (match: string) => {
     if (match === 'projects') {
       return pathname === '/projects' || pathname.startsWith('/projects/');
+    }
+    if (match === 'services') {
+      return pathname === '/services' || pathname.startsWith('/services/');
     }
     if (match === 'contact') {
       return pathname === '/contact';
