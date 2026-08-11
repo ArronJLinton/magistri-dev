@@ -67,8 +67,7 @@ export const projects: Project[] = [
     tablet: '/assets/img/project/aphasia-tablet.png',
     desktop: '/assets/img/project/aphasia-desktop.png',
     ios: 'https://apps.apple.com/us/app/my-aphasia-coach/id1163288893?ls=1',
-    android:
-      'https://play.google.com/store/apps/details?id=com.myaphasiacoach',
+    android: 'https://play.google.com/store/apps/details?id=com.myaphasiacoach',
     category: 'Web/Mobile App',
     client: 'Phasic Software, LLC',
     metaLabel: 'Healthcare Tech • My Aphasia Coach',
@@ -92,7 +91,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: 'The Takedown',
-    listingTitle: 'The Takedown Analytics',
+    listingTitle: 'The Takedown',
     subtitle: 'Protect your content with clearer competitive insight.',
     mobile: '/assets/img/project/takedown-mobile.png',
     tablet: '/assets/img/project/takedown-tablet.png',
@@ -116,6 +115,23 @@ export const projects: Project[] = [
       mobileDescription:
         'Stay informed with streamlined mobile views for urgent updates.',
     },
+  },
+  {
+    id: 4,
+    title: 'Visa Connect',
+    listingTitle: 'Visa Connect',
+    subtitle: 'Connect kindred professionals that have walked a similar path.',
+    mobile: '/assets/img/project/visaconnect/visaconnect-mobile.png',
+    tablet: '/assets/img/project/visaconnect/visaconnect-tablet.png',
+    desktop: '/assets/img/project/visaconnect/visaconnect.png',
+    category: 'SaaS Dashboard',
+    client: 'Visa Connect',
+    metaLabel: 'Professional Networking • Visa Connect',
+    tags: ['Professional Networking'],
+    description:
+      "VisaConnect is where H-2B, J-1, and H-1B workers live. Post jobs directly to the community that's actively looking — and build your reputation as a visa-friendly employer.",
+    listingDescription:
+      'A professional networking platform for H-2B, J-1, and H-1B workers to connect with employers and build their reputation as a visa-friendly employer.',
   },
 ];
 

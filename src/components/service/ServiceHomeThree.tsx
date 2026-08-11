@@ -93,6 +93,28 @@ const ServiceHomeThree = () => {
           </p>
         </div>
 
+        <div className="md-ai-banner">
+          <div>
+            <span className="md-ai-pill">Next-Gen</span>
+            <h3>
+              <Link href="/services" className="md-ai-title-link">
+                AI Agent Development
+              </Link>
+            </h3>
+            <p>
+              Automate complex workflows, enhance customer support, and unlock
+              new capabilities with custom-trained artificial intelligence
+              models integrated directly into your infrastructure.
+            </p>
+            <Link href="/services" className="md-btn md-btn-light">
+              Explore AI Solutions <i className="fa-regular fa-arrow-right" />
+            </Link>
+          </div>
+          <div className="md-ai-art-wrap">
+            <AiArt />
+          </div>
+        </div>
+
         <div className="md-service-grid">
           {services.map((service) => (
             <article key={service.title} className="md-service-card">
@@ -110,24 +132,6 @@ const ServiceHomeThree = () => {
               <p>{service.description}</p>
             </article>
           ))}
-        </div>
-
-        <div className="md-ai-banner">
-          <div>
-            <span className="md-ai-pill">Next-Gen</span>
-            <h3>AI Agent Development</h3>
-            <p>
-              Automate complex workflows, enhance customer support, and unlock
-              new capabilities with custom-trained artificial intelligence
-              models integrated directly into your infrastructure.
-            </p>
-            <Link href="/contact" className="md-btn md-btn-light">
-              Explore AI Solutions <i className="fa-regular fa-arrow-right" />
-            </Link>
-          </div>
-          <div className="md-ai-art-wrap">
-            <AiArt />
-          </div>
         </div>
       </div>
     </section>

@@ -37,10 +37,10 @@ const menu_data = [
   {
     id: 3,
     title: 'Services',
-    link: '/#services',
+    link: '/services',
     has_dropdown: false,
     sub_menus: [
-      { link: '/service', title: 'service' },
+      { link: '/services', title: 'service' },
       { link: '/service-details', title: 'service details' },
     ],
   },
