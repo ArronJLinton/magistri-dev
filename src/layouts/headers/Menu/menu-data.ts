@@ -39,10 +39,6 @@ const menu_data = [
     title: 'Services',
     link: '/services',
     has_dropdown: false,
-    sub_menus: [
-      { link: '/services', title: 'service' },
-      { link: '/service-details', title: 'service details' },
-    ],
   },
   {
     id: 4,

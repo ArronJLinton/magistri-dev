@@ -129,7 +129,7 @@ export const projects: Project[] = [
     metaLabel: 'Professional Networking • Visa Connect',
     tags: ['Professional Networking'],
     description:
-      "VisaConnect is where H-2B, J-1, and H-1B workers live. Post jobs directly to the community that's actively looking — and build your reputation as a visa-friendly employer.",
+      'VisaConnect is where H-2B, J-1, and H-1B workers live. Post jobs directly to the community that\'s actively looking — and build your reputation as a visa-friendly employer.',
     listingDescription:
       'A professional networking platform for H-2B, J-1, and H-1B workers to connect with employers and build their reputation as a visa-friendly employer.',
   },
