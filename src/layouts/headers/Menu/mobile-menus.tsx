@@ -50,7 +50,7 @@ const MobileMenus = () => {
                     }}
                   >
                     <div className="row gx-6 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
-                      {menu.sub_menus.map((item, i) => (
+                      {menu.sub_menus?.map((item, i) => (
                         <div key={i} className="col home-img">
                           <div className="home-img-thumb mb-15">
                             {/* <Image src={item.demo_img} style={{ width: "100", height: "auto" }} alt="" /> */}

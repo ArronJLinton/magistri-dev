@@ -1,4 +1,18 @@
-const menu_data = [
+interface SubMenu {
+  link: string;
+  title: string;
+}
+
+interface MenuItem {
+  id: number;
+  title: string;
+  link: string;
+  img_dropdown?: boolean;
+  has_dropdown?: boolean;
+  sub_menus?: SubMenu[];
+}
+
+const menu_data: MenuItem[] = [
   {
     id: 1,
     title: 'Home',
